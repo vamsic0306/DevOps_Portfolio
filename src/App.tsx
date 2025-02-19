@@ -14,12 +14,11 @@ import {
 } from 'lucide-react';
 
 function App() {
+  // ✅ Corrected Resume Download Link (Direct Download from GitHub)
   const handleDownloadResume = () => {
-  // Correct raw GitHub URL format for direct PDF download
-  const resumeUrl = 'https://raw.githubusercontent.com/vamsic0306/My_Portafolio/main/resume.pdf';
-  window.open(resumeUrl, '_blank');
-};
-
+    const resumeUrl = 'https://raw.githubusercontent.com/vamsic0306/My_Portafolio/main/resume.pdf';
+    window.open(resumeUrl, '_blank');
+  };
 
   const projects = [
     {
@@ -67,31 +66,31 @@ function App() {
         <div className="flex flex-col items-center text-center mb-16">
           <TerminalIcon className="w-16 h-16 mb-6 text-blue-400" />
           <h1 className="text-4xl md:text-6xl font-bold mb-6">DevOps Engineer</h1>
+          {/* ✅ Improved Type Animation for Smooth Transitions */}
           <TypeAnimation
             sequence={[
-              'Infrastructure as Code',
-              2000,
-              'CI/CD Pipeline Expert',
-              2000,
-              'Kubernetes Specialist',
-              2000,
-              'Cloud Architecture',
-              2000,
+              'Infrastructure as Code', 1500,
+              'CI/CD Pipeline Expert', 1500,
+              'Kubernetes Specialist', 1500,
+              'Cloud Architecture', 1500,
             ]}
             wrapper="span"
-            speed={50}
+            speed={40}
+            deletionSpeed={30}
             className="text-xl md:text-2xl text-blue-400"
             repeat={Infinity}
           />
           <div className="flex gap-4 mt-8">
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" 
+            {/* ✅ Corrected GitHub Profile Link */}
+            <a href="https://github.com/vamsic0306" target="_blank" rel="noopener noreferrer" 
                className="flex items-center gap-2 bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg transition-colors">
               <GithubIcon className="w-5 h-5" />
               GitHub
             </a>
+            {/* ✅ Fixed Download Resume Button & Improved Styling */}
             <button 
               onClick={handleDownloadResume}
-              className="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 px-6 py-2 rounded-lg transition-colors">
+              className="flex items-center gap-2 bg-blue-600 hover:bg-blue-400 px-6 py-2 rounded-lg shadow-lg transform transition hover:scale-105">
               <DownloadIcon className="w-5 h-5" />
               Download Resume
             </button>

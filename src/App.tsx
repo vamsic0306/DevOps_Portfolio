@@ -15,10 +15,11 @@ import {
 
 function App() {
   const handleDownloadResume = () => {
-    // Replace this URL with your actual resume PDF URL once you upload it to GitHub
-    const resumeUrl = 'https://github.com/vamsic0306/My_Portafolio/blob/main/resume.pdf';
-    window.open(resumeUrl, '_blank');
-  };
+  // Correct raw GitHub URL format for direct PDF download
+  const resumeUrl = 'https://raw.githubusercontent.com/vamsic0306/My_Portafolio/main/resume.pdf';
+  window.open(resumeUrl, '_blank');
+};
+
 
   const projects = [
     {
